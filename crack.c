@@ -8,7 +8,7 @@ const int HASH_LENGTH = 13;
 
 void printUsage(void);
 bool compareHashes(char hash1[HASH_LENGTH + 1], char hash2[HASH_LENGTH + 1]);
-bool permuteAndTest(string guess, int currentIndex, char salt[3], char hash[14]);
+bool permuteAndTest(string guess, int currentIndex, char salt[3], char hash[HASH_LENGTH + 1]);
 
 int main(int argc, string argv[])
 {
@@ -62,7 +62,7 @@ bool compareHashes(char hash1[HASH_LENGTH + 1], char hash2[HASH_LENGTH + 1])
     return true;
 }
 
-bool permuteAndTest(string guess, int currentIndex, char salt[3], char hash[14])
+bool permuteAndTest(string guess, int currentIndex, char salt[3], char hash[HASH_LENGTH + 1])
 {
     int len = strlen(guess);
     
